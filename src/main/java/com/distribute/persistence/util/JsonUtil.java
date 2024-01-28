@@ -3,7 +3,11 @@ package com.distribute.persistence.util;
 import com.distribute.domain.action.BatchParam;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.type.CollectionType;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
 
 /*
 * Json工具类, 转换为指定数据

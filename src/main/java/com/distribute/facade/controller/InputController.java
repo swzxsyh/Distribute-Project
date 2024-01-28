@@ -1,7 +1,8 @@
 package com.distribute.facade.controller;
 
 
-import com.distribute.application.DistributeService;
+import com.distribute.application.InputService;
+import com.distribute.domain.action.BatchResultVo;
 import com.distribute.facade.dto.BatchInputDto;
 import com.distribute.persistence.model.Result;
 import lombok.extern.slf4j.Slf4j;
@@ -17,12 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class InputController {
 
     @Autowired
-    private DistributeService distributeService;
+    private InputService inputService;
 
     @PostMapping("/multi")
     public Result<?> multi(@RequestBody BatchInputDto batchInputDto) throws InterruptedException {
-        Boolean success = distributeService.multi(batchInputDto);
-        return success ? Result.success() : Result.error("Batch失败");
+        BatchResultVo vo = inputService.multi(batchInputDto);
+        return Result.success(vo);
     }
 
 }

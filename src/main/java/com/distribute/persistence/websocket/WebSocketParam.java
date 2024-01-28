@@ -1,3 +1,5 @@
+package com.distribute.persistence.websocket;
+
 import lombok.Data;
 
 @Data

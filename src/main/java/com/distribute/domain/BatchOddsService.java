@@ -1,6 +1,7 @@
 package com.distribute.domain;
 
 
+import com.distribute.domain.action.Outcome;
 import com.distribute.facade.dto.BatchInputDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class BatchOddsService {
         log.info("doBatchOdds");
     }
 
-    public String batch(BatchInputDto.Odds odds) {
-        return "batch";
+    public Outcome batch(BatchInputDto.Odds odds) {
+        return new Outcome();
     }
 }
