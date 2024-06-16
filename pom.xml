@@ -28,6 +28,13 @@
         <druid.version>1.2.16</druid.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>diffusion-data-repository</id>
+            <url>https://download.diffusiondata.com/maven/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -119,6 +126,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pushtechnology.diffusion</groupId>
+            <artifactId>diffusion-client</artifactId>
+            <version>6.10.4</version>
         </dependency>
     </dependencies>
 
